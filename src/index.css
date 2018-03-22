@@ -5,3 +5,9 @@
 .bg-primary {
 	background-color: #f44336 !important;
 }
+
+.profile-image {
+	width: 256px;
+	border-radius: 50%;
+	padding-top: 40px;
+}
