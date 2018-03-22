@@ -6,8 +6,8 @@ export default class Header extends Component {
 			<header className="header bg-primary text-white text-center">
 				<div className="container">
 					<img
-						className="img-fluid mb-5 d-block mx-auto"
-						src="/img/profile.png"
+						className="img-fluid mb-5 d-block mx-auto profile-image"
+						src="/img/profile.jpg"
 						alt=""
 					/>
 					<h1 className="text-uppercase mb-0">Start Bootstrap</h1>
