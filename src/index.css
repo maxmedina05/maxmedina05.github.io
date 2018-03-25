@@ -6,6 +6,27 @@
 	background-color: #f44336 !important;
 }
 
+/************
+	TOPBAR
+ *************/
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff !important;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.navbar-brand {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.nav-link:hover {
+	background-color: #f44336;
+}
+
+/************
+	HEADER
+ *************/
 .about {
 	background-color: #f44336 !important;
 	color: #fff;

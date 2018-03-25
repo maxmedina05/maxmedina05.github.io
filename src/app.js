@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Topbar from './topbar';
+import Topbar from './components/topbar';
 import Header from './components/header';
 import Portfolio from './components/portfolio';
 import About from './components/about';
@@ -9,7 +9,7 @@ import Footer from './components/footer';
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<div id="page-top">
 				<Topbar />
 				<Header />
 				<Portfolio />

@@ -19,23 +19,15 @@ export default class Footer extends Component {
 								<li className="list-inline-item">
 									<a
 										className="btn btn-outline-light btn-social text-center rounded-circle"
-										href="#"
+										href="https://github.com/maxmedina05"
 									>
-										<i className="fa fa-fw fa-facebook" />
+										<i className="fa fa-fw fa-github" />
 									</a>
 								</li>
 								<li className="list-inline-item">
 									<a
 										className="btn btn-outline-light btn-social text-center rounded-circle"
-										href="#"
-									>
-										<i className="fa fa-fw fa-google-plus" />
-									</a>
-								</li>
-								<li className="list-inline-item">
-									<a
-										className="btn btn-outline-light btn-social text-center rounded-circle"
-										href="#"
+										href="https://twitter.com/maxmedina05"
 									>
 										<i className="fa fa-fw fa-twitter" />
 									</a>
@@ -43,7 +35,7 @@ export default class Footer extends Component {
 								<li className="list-inline-item">
 									<a
 										className="btn btn-outline-light btn-social text-center rounded-circle"
-										href="#"
+										href="https://www.linkedin.com/in/max-medina-082590a0/"
 									>
 										<i className="fa fa-fw fa-linkedin" />
 									</a>
