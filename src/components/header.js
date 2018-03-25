@@ -10,7 +10,7 @@ export default class Header extends Component {
 						src="/img/profile.jpg"
 						alt=""
 					/>
-					<h1 className="text-uppercase mb-0">Start Bootstrap</h1>
+					<h1 className="text-uppercase mb-0">Max Medina</h1>
 					<hr className="star-light" />
 					<h2 className="font-weight-light mb-0">
 						Computer Engineer - Web Developer - Polygot
