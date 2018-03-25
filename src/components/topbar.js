@@ -4,7 +4,7 @@ export default class Topbar extends Component {
 	renderNavs() {
 		const links = ['portfolio', 'resume', 'about', 'contact'];
 		return links.map(link => (
-			<li className="nav-link" key={link}>
+			<li className="nav-link text-uppercase" key={link}>
 				<a className="nav-link" href={'#' + link}>
 					{link}
 				</a>
@@ -14,7 +14,7 @@ export default class Topbar extends Component {
 
 	render() {
 		return (
-			<nav className="navbar navbar-expand-lg navbar-dark bg-dark-primary">
+			<nav className="navbar navbar-expand-lg navbar-dark bg-dark-primary fixed-top">
 				<a className="navbar-brand" href="#">
 					Max Medina
 				</a>
