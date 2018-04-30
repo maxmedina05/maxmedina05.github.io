@@ -19,7 +19,7 @@ class App extends Component {
 
 				<div className="copyright py-4 text-center text-white">
 					<div className="container">
-						<small>Copyright &copy; Your Website 2018</small>
+						<small>Copyright &copy; Max Medina 2018</small>
 					</div>
 				</div>
 			</div>

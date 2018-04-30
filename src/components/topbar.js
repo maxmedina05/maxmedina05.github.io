@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class Topbar extends Component {
 	renderNavs() {
-		const links = ['portfolio', 'resume', 'about', 'contact'];
+		const links = ['portfolio', 'about', 'contact'];
 		return links.map(link => (
 			<li className="nav-link text-uppercase" key={link}>
 				<a className="nav-link" href={'#' + link}>
