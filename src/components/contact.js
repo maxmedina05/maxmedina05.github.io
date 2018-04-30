@@ -3,43 +3,38 @@ import React, { Component } from 'react';
 export default class Contact extends Component {
 	render() {
 		return (
-			<section id="contact">
+			<section id="contact" className="contact">
 				<div className="container">
-					<h1>Contact Me</h1>
+					<h1 className="text-center text-uppercase text-secondary mb-0">
+						Contact Me
+					</h1>
+					<hr className="star-dark mb-5" />
+					<div className="paper-form row justify-content-center">
+						<div className="col-md-4 col-sm-8">
+							<div className="card shadow">
+								<address className="card-address">
+									<p className="text-center">
+										<strong>Max Medina</strong>
+									</p>
+									<br />
+									<span>
+										<i className="fa fa-envelope" />
+										<a href="mailto:maxmedina05@gmail.com">
+											maxmedina05@gmail.com
+										</a>
+									</span>
 
-					<form>
-						<div className="form-group">
-							<label htmlFor="name">Name</label>
-							<input
-								type="text"
-								className="form-control"
-								id="name"
-								placeholder="John Doe"
-							/>
+									<br />
+									<span>
+										<i className="fa fa-linkedin" />
+										<a href="https://www.linkedin.com/in/max-medina-082590a0/">
+											Max Medina
+										</a>
+									</span>
+								</address>
+							</div>
 						</div>
-						<div className="form-group">
-							<label htmlFor="email">Email Address</label>
-							<input
-								type="text"
-								className="form-control"
-								id="email"
-								placeholder="user@example.com"
-							/>
-						</div>
-						<div className="form-group">
-							<label htmlFor="phone">Phone Number</label>
-							<input
-								type="text"
-								className="form-control"
-								id="phone"
-								placeholder="+1 (809) 555-5555"
-							/>
-						</div>
-						<div className="form-group">
-							<label htmlFor="message">Message</label>
-							<textarea className="form-control" id="message" rows="3" />
-						</div>
-					</form>
+					</div>
 				</div>
 			</section>
 		);

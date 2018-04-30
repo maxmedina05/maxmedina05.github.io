@@ -1,9 +1,13 @@
 .bg-dark-primary {
-	background-color: #d32f2f;
+	background-color: #800000;
 }
 
 .bg-primary {
-	background-color: #f44336 !important;
+	background-color: #b80c09 !important;
+}
+
+section {
+	padding: 6rem 0;
 }
 
 /************
@@ -21,7 +25,7 @@
 }
 
 .nav-link:hover {
-	background-color: #f44336;
+	background-color: #b80c09;
 }
 
 /************
@@ -59,30 +63,57 @@ hr.star-light {
 
 hr.star-light:after {
 	color: #fff;
-	background-color: #f44336;
+	background-color: #b80c09;
 }
 
 hr.star-dark {
-	border-color: #2c3e50;
+	border-color: #b80c09;
 }
 
 hr.star-dark:after {
-	color: #2c3e50;
+	color: #b80c09;
 	background-color: white;
 }
 
-section {
-	padding: 6rem 0;
+/************
+	PORTFOLIO
+ *************/
+.portfolio h1 {
+	color: #b80c09 !important;
+}
+
+.contact h1 {
+	color: #b80c09 !important;
+}
+
+.about h1 {
+	color: #b80c09 !important;
+}
+
+.about hr.star-dark:after {
+	color: #b80c09;
+	background-color: #efefef;
+}
+
+.paper-form form {
+	padding: 20px;
+}
+
+.shadow {
+	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+		0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
 
 .about {
-	background-color: #f44336 !important;
-	color: #fff;
+	background-color: #efefef !important;
+	color: #000;
 }
 
 .footer {
-	background-color: #f44336 !important;
+	background-color: #b80c09 !important;
 	color: #fff;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 }
 
 .profile-image {
@@ -92,5 +123,37 @@ section {
 }
 
 .copyright {
-	background-color: #d32f2f;
+	background-color: #800000;
+}
+
+.card-address {
+	padding: 16px;
+	color: #b80c09;
+}
+
+.card-address p {
+	margin-bottom: 0;
+}
+
+.card-address span i {
+	margin-right: 8px;
+}
+
+.card-address span a {
+	color: #ada9b7;
+	font-weight: bold;
+}
+
+.card-address span a:hover {
+	color: #b80c09;
+}
+
+.project-url-link {
+	color: white;
+	background-color: #b80c09 !important;
+}
+
+.project-url-link:hover {
+	color: white;
+	background-color: #800000 !important;
 }
