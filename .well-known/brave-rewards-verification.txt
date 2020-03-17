@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: maxmedina05.github.io
+Token: e88b75a4d87d81eb8a19f84b181287e3d4368c9dffdd376a66cf2dd2fc05df3f
