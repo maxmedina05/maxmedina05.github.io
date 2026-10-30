@@ -194,6 +194,7 @@
   @media(max-width:560px){.modal-outcomes{grid-template-columns:1fr}}
   .outcome{background:var(--panel);padding:24px 20px}
   .outcome .o-val{font-family:'Unbounded',sans-serif;font-weight:300;font-size:clamp(19px,2.2vw,26px);color:var(--amber)}
+  .modal-cta{margin-top:36px}
   .outcome .o-key{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin-top:9px}
 
   /* ---------- Capabilities ---------- */
@@ -280,7 +281,7 @@
     <div class="about-grid">
       <div class="reveal">
         <p class="about-lede">Dominican-born, Berlin-based. I'm a senior software engineer with a <em>product builder's instincts</em>: I like owning things end to end, from the first architecture sketch to the alert that fires at 3 a.m. so I don't have to.</p>
-        <p class="about-body">My day job is building customer-facing features on a security product team, in React, TypeScript, and Node.js, with a TDD habit I defend in code review. Outside of it I run real infrastructure: cloud pipelines processing satellite data, and a small fleet of Raspberry Pis at home doing actual work, not collecting dust.</p>
+        <p class="about-body">My day job is building customer-facing features on a security product team, in React, TypeScript, and Node.js, with a TDD habit I defend in code review. Outside of it I ship my own products and an Android app, and run real infrastructure: cloud pipelines processing satellite data, and a home fleet of Raspberry Pis and a local-LLM Mac mini doing actual work, not collecting dust.</p>
         <p class="about-body">What drives me is the full arc, noticing a problem, designing the simplest system that solves it, shipping it, and keeping it alive. I'd rather run two things that work than architect ten that don't exist.</p>
       </div>
       <div class="about-meta reveal">
@@ -319,12 +320,52 @@
       <span class="proj-open">CASE&nbsp;STUDY <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></span>
     </button>
 
+    <button class="proj-card reveal" data-modal="modal-foldy" aria-haspopup="dialog">
+      <div>
+        <div class="proj-eyebrow">PROFESSIONAL · MOBILE · CLOSED BETA</div>
+        <div class="proj-name">Foldy for Android</div>
+        <p class="proj-desc">The Android half of an established iOS document app, built from scratch as sole Android engineer. Scan, organize, and search tax letters, government mail, and medical paperwork with on-device OCR and translation, and name redaction before anything could leave the phone.</p>
+        <div class="proj-chips"><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Room</span><span class="chip">ML Kit</span><span class="chip">Play Billing</span></div>
+      </div>
+      <span class="proj-open">CASE&nbsp;STUDY <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+    </button>
+
+    <button class="proj-card reveal" data-modal="modal-klkia" aria-haspopup="dialog">
+      <div>
+        <div class="proj-eyebrow">PRODUCT · LIVE · AI</div>
+        <div class="proj-name">Klk IA</div>
+        <p class="proj-desc">A morning digest for small businesses that run on WhatsApp. It reads the owner's work chats and says what's urgent, who's still waiting, and what to do next. It never replies to customers.</p>
+        <div class="proj-chips"><span class="chip">TypeScript</span><span class="chip">WhatsApp Cloud API</span><span class="chip">Meta Tech Provider</span><span class="chip">OpenAI</span><span class="chip">PostgreSQL</span><span class="chip">Stripe</span></div>
+      </div>
+      <span class="proj-open">DETAILS <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+    </button>
+
+    <button class="proj-card reveal" data-modal="modal-dschutz" aria-haspopup="dialog">
+      <div>
+        <div class="proj-eyebrow">PRODUCT · ANDROID · LIVE</div>
+        <div class="proj-name">D-Schutz</div>
+        <p class="proj-desc">An Android PDF reader with an on-device AI assistant. Ask questions about your documents fully offline: no accounts, no tracking, and your files never leave the phone.</p>
+        <div class="proj-chips"><span class="chip">Android</span><span class="chip">On-device AI</span><span class="chip">Offline-first</span></div>
+      </div>
+      <span class="proj-open">DETAILS <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+    </button>
+
+    <button class="proj-card reveal" data-modal="modal-tsd" aria-haspopup="dialog">
+      <div>
+        <div class="proj-eyebrow">CLIENT · WEB · LIVE</div>
+        <div class="proj-name">Tropical Sea Divers</div>
+        <p class="proj-desc">A 20-year-old dive-school website in Boca Chica, Dominican Republic, rebuilt into a fast five-language site. Static prerendering means search engines and social platforms read every page in every language.</p>
+        <div class="proj-chips"><span class="chip">5 languages</span><span class="chip">Static prerendering</span><span class="chip">SEO</span></div>
+      </div>
+      <span class="proj-open">DETAILS <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+    </button>
+
     <button class="proj-card reveal" data-modal="modal-homelab" aria-haspopup="dialog">
       <div>
         <div class="proj-eyebrow">PERSONAL · SELF-HOSTED INFRASTRUCTURE</div>
-        <div class="proj-name">Homelab &amp; Raspberry Pi Fleet</div>
-        <p class="proj-desc">A production-minded homelab: three Raspberry Pis meshed over Tailscale, running Dockerized services for file sync, document tooling, and workflow automation, kept alive with the same care as anything I run professionally.</p>
-        <div class="proj-chips"><span class="chip">Raspberry Pi</span><span class="chip">Docker</span><span class="chip">Tailscale</span><span class="chip">n8n</span><span class="chip">Nextcloud</span></div>
+        <div class="proj-name">Homelab, Pi Fleet &amp; Local AI</div>
+        <p class="proj-desc">A production-minded homelab: three Raspberry Pis and a Mac mini meshed over Tailscale, running Dockerized services for file sync, document tooling, and workflow automation, plus a document-anonymization pipeline and a local LLM node for privacy-first AI work.</p>
+        <div class="proj-chips"><span class="chip">Raspberry Pi</span><span class="chip">Mac mini</span><span class="chip">Ollama</span><span class="chip">Presidio</span><span class="chip">Docker</span><span class="chip">Tailscale</span><span class="chip">n8n</span></div>
       </div>
       <span class="proj-open">DETAILS <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></span>
     </button>
@@ -415,6 +456,164 @@
   </div>
 </div>
 
+<!-- ============ MODAL: FOLDY ============ -->
+<div class="modal" id="modal-foldy" role="dialog" aria-modal="true" aria-labelledby="foldy-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close aria-label="Close case study">CLOSE&nbsp;✕</button>
+    <div class="modal-eyebrow">CASE STUDY · SOLE ANDROID ENGINEER · CLOSED BETA</div>
+    <h3 class="modal-title" id="foldy-title">The missing half of a shipping product, built from scratch.</h3>
+    <p class="modal-intro">Foldy scans, organizes, and searches the paperwork people dread: tax certificates, government letters, medical documents. The iOS app already had users and a team behind it, and clients and investors kept asking for Android.</p>
+    <p class="modal-intro">I built the Android app from zero as its only Android engineer, using the iOS app as the behavioral reference and Material 3 as the design language.</p>
+    <ul class="pipeline">
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;01<br>CAPTURE</div>
+        <div>
+          <div class="pipe-name">Scan or import</div>
+          <p class="pipe-desc">Edge-detecting document scanning or file import. Files land only in app-private storage, so documents never touch shared storage.</p>
+          <div class="pipe-stack"><span class="chip">ML Kit Document Scanner</span><span class="chip">App-private storage</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;02<br>UNDERSTAND</div>
+        <div>
+          <div class="pipe-name">On-device OCR, search, translation</div>
+          <p class="pipe-desc">A WorkManager queue runs OCR in the background and survives the app closing. Full-text search is accent-insensitive, which matters for German, Spanish, and Italian mail. Translation runs on the phone, with language models downloaded only after the user agrees.</p>
+          <div class="pipe-stack"><span class="chip">ML Kit OCR</span><span class="chip">Room FTS4</span><span class="chip">WorkManager</span><span class="chip">ML Kit Translate</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;03<br>PROTECT</div>
+        <div>
+          <div class="pipe-name">Redaction before anything leaves</div>
+          <p class="pipe-desc">Person names are replaced with placeholders on the device before any text could be sent anywhere, then restored locally in the response. Names are found by a small bundled character-level model plus rules for how letters place them, in pure Kotlin with no runtime dependency.</p>
+          <div class="pipe-stack"><span class="chip">On-device model</span><span class="chip">Kotlin</span><span class="chip">Privacy by design</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;04<br>SHIP</div>
+        <div>
+          <div class="pipe-name">Pro tier and release pipeline</div>
+          <p class="pipe-desc">Pro features sit behind Play Billing and explicit AI consent. UI in five languages with lint enforcing complete translations, a scripted signed-release pipeline, and a documented inventory of every flow that sends data off the device.</p>
+          <div class="pipe-stack"><span class="chip">Play Billing</span><span class="chip">Jetpack Compose</span><span class="chip">Navigation 3</span><span class="chip">en · de · es · it · uk</span></div>
+        </div>
+      </li>
+    </ul>
+    <div class="modal-outcomes">
+      <div class="outcome"><div class="o-val">0 → beta</div><div class="o-key">Native Android app, from an empty repo</div></div>
+      <div class="outcome"><div class="o-val">On-device</div><div class="o-key">OCR, translation, and redaction. No document leaves the phone by default</div></div>
+      <div class="outcome"><div class="o-val">5 languages</div><div class="o-key">Lint fails the build on a missing translation</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: KLK IA ============ -->
+<div class="modal" id="modal-klkia" role="dialog" aria-modal="true" aria-labelledby="klkia-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close aria-label="Close details">CLOSE&nbsp;✕</button>
+    <div class="modal-eyebrow">PRODUCT · LIVE</div>
+    <h3 class="modal-title" id="klkia-title">One morning message instead of a buried inbox.</h3>
+    <p class="modal-intro">Small businesses across Latin America run on WhatsApp, and a new customer's message gets buried under groups, voice notes, and forwards. Klk IA reads the owner's work chats and sends one digest each morning: what's urgent, who's still waiting, and what to do next.</p>
+    <p class="modal-intro">The one hard rule: it never replies to customers. It reads, it summarizes, the owner acts.</p>
+    <ul class="pipeline">
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;01<br>LISTEN</div>
+        <div>
+          <div class="pipe-name">WhatsApp in</div>
+          <p class="pipe-desc">Work conversations come in through the WhatsApp Cloud API and are kept in PostgreSQL. To build it on the platform properly, I became a Meta Tech Provider.</p>
+          <div class="pipe-stack"><span class="chip">WhatsApp Cloud API</span><span class="chip">Meta Tech Provider</span><span class="chip">PostgreSQL</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;02<br>DECIDE</div>
+        <div>
+          <div class="pipe-name">What matters today</div>
+          <p class="pipe-desc">An LLM turns the day's conversations into what's urgent, who's still waiting, and what to do next, so the owner reads one message, not fifty chats.</p>
+          <div class="pipe-stack"><span class="chip">OpenAI</span><span class="chip">TypeScript</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;03<br>OPERATE</div>
+        <div>
+          <div class="pipe-name">A real product</div>
+          <p class="pipe-desc">Billing through Stripe, hosted on Railway, and run as a live service rather than a demo.</p>
+          <div class="pipe-stack"><span class="chip">Stripe</span><span class="chip">Railway</span></div>
+        </div>
+      </li>
+    </ul>
+    <div class="modal-cta"><a class="btn btn-amber" href="https://klkia.com" target="_blank" rel="noopener">VISIT&nbsp;KLKIA.COM&nbsp;↗</a></div>
+  </div>
+</div>
+
+<!-- ============ MODAL: D-SCHUTZ ============ -->
+<div class="modal" id="modal-dschutz" role="dialog" aria-modal="true" aria-labelledby="dschutz-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close aria-label="Close details">CLOSE&nbsp;✕</button>
+    <div class="modal-eyebrow">PRODUCT · ANDROID · LIVE ON GOOGLE PLAY</div>
+    <h3 class="modal-title" id="dschutz-title">A PDF reader that keeps your documents to itself.</h3>
+    <p class="modal-intro">Most "chat with your PDF" tools upload your files first. D-Schutz does the opposite: an Android PDF reader whose AI assistant runs on the phone, so you can ask questions about a document with no connection at all.</p>
+    <ul class="pipeline">
+      <li class="pipe-stage">
+        <div class="pipe-label">PRINCIPLE&nbsp;01<br>OFFLINE</div>
+        <div>
+          <div class="pipe-name">Ask without a network</div>
+          <p class="pipe-desc">The assistant answers questions about your documents fully offline, using on-device models.</p>
+          <div class="pipe-stack"><span class="chip">On-device AI</span><span class="chip">Android</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">PRINCIPLE&nbsp;02<br>PRIVATE</div>
+        <div>
+          <div class="pipe-name">No accounts, no tracking</div>
+          <p class="pipe-desc">Nothing to sign up for, nothing watching you read. Your files never leave the phone, and the privacy policy discloses exactly what the SDKs do collect.</p>
+          <div class="pipe-stack"><span class="chip">No accounts</span><span class="chip">No tracking</span><span class="chip">Published privacy policy</span></div>
+        </div>
+      </li>
+    </ul>
+    <div class="modal-cta"><a class="btn btn-amber" href="https://medina-labs.com/d-schutz/" target="_blank" rel="noopener">LEARN&nbsp;MORE&nbsp;↗</a></div>
+  </div>
+</div>
+
+<!-- ============ MODAL: TROPICAL SEA DIVERS ============ -->
+<div class="modal" id="modal-tsd" role="dialog" aria-modal="true" aria-labelledby="tsd-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close aria-label="Close details">CLOSE&nbsp;✕</button>
+    <div class="modal-eyebrow">CLIENT WORK · WEB · LIVE</div>
+    <h3 class="modal-title" id="tsd-title">A 20-year-old dive-school site, rebuilt to be found.</h3>
+    <p class="modal-intro">Tropical Sea Divers is a dive school in Boca Chica, Dominican Republic. Its website was twenty years old, and I rebuilt it into a fast multilingual site that search engines and social platforms can actually read.</p>
+    <ul class="pipeline">
+      <li class="pipe-stage">
+        <div class="pipe-label">STEP&nbsp;01<br>REBUILD</div>
+        <div>
+          <div class="pipe-name">Fast and mobile-first</div>
+          <p class="pipe-desc">A ground-up rebuild replaced the legacy site with a fast one.</p>
+          <div class="pipe-stack"><span class="chip">Rebuild</span><span class="chip">Performance</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STEP&nbsp;02<br>TRANSLATE</div>
+        <div>
+          <div class="pipe-name">Five languages, one codebase</div>
+          <p class="pipe-desc">Every page exists in five languages.</p>
+          <div class="pipe-stack"><span class="chip">5 languages</span><span class="chip">i18n</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STEP&nbsp;03<br>PRERENDER</div>
+        <div>
+          <div class="pipe-name">Readable by crawlers and link previews</div>
+          <p class="pipe-desc">Static prerendering ships real HTML for every page in every language, so search engines and social platforms read the content without running JavaScript.</p>
+          <div class="pipe-stack"><span class="chip">Static prerendering</span><span class="chip">SEO</span></div>
+        </div>
+      </li>
+    </ul>
+    <div class="modal-cta"><a class="btn btn-amber" href="https://www.tropicalseadivers.com" target="_blank" rel="noopener">VISIT&nbsp;SITE&nbsp;↗</a></div>
+  </div>
+</div>
+
 <!-- ============ MODAL: HOMELAB ============ -->
 <div class="modal" id="modal-homelab" role="dialog" aria-modal="true" aria-labelledby="homelab-title">
   <div class="modal-backdrop" data-close></div>
@@ -422,7 +621,7 @@
     <button class="modal-close" data-close aria-label="Close details">CLOSE&nbsp;✕</button>
     <div class="modal-eyebrow">PERSONAL INFRASTRUCTURE · ALWAYS ON</div>
     <h3 class="modal-title" id="homelab-title">A homelab run like production, because it does production work.</h3>
-    <p class="modal-intro">Three Raspberry Pis (models 3, 4, and 5) meshed into a private network with Tailscale, each running Dockerized services organized for clean operations. It's a learning ground for distributed systems, but it also carries real responsibilities.</p>
+    <p class="modal-intro">Three Raspberry Pis (models 3, 4, and 5) and a Mac mini meshed into a private network with Tailscale, each running services organized for clean operations. It's a learning ground for distributed systems, but it also carries real responsibilities.</p>
     <ul class="pipeline">
       <li class="pipe-stage">
         <div class="pipe-label">LAYER&nbsp;01<br>NETWORK</div>
@@ -449,11 +648,19 @@
         </div>
       </li>
       <li class="pipe-stage">
-        <div class="pipe-label">LAYER&nbsp;04<br>NEXT</div>
+        <div class="pipe-label">LAYER&nbsp;04<br>PRIVACY</div>
         <div>
-          <div class="pipe-name">Distributed computing</div>
-          <p class="pipe-desc">Next on the bench: lightweight Kubernetes (k3s) across the fleet, Pi 5 as control plane, the others as workers, as a hands-on path into orchestration and distributed workloads.</p>
-          <div class="pipe-stack"><span class="chip">k3s</span><span class="chip">kubectl</span><span class="chip">Planned</span></div>
+          <div class="pipe-name">Document anonymization pipeline</div>
+          <p class="pipe-desc">Send a PDF or photo to a private Telegram bot and get back text with personal data replaced by markers like <code>&lt;PERSON&gt;</code>, safe to hand to an LLM. n8n orchestrates OCR through Stirling-PDF and detection through Microsoft Presidio, extended with custom recognizers for Dominican IDs and a personal dictionary. It's built to fail closed: if a known term or a valid ID number survives redaction, or anything else goes wrong, it stops and says so instead of guessing. Backed by a 229-case test suite, an allow-list of Telegram users, and execution logging switched off so documents are never stored.</p>
+          <div class="pipe-stack"><span class="chip">n8n</span><span class="chip">Microsoft Presidio</span><span class="chip">Stirling-PDF OCR</span><span class="chip">Telegram bot</span><span class="chip">Fail-closed</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">LAYER&nbsp;05<br>LOCAL&nbsp;AI</div>
+        <div>
+          <div class="pipe-name">Private inference node</div>
+          <p class="pipe-desc">A Mac mini (M6, 32 GB) serves open-weight MLX models through Ollama, reachable only over the Tailscale mesh. n8n workflows call it for summarizing and classifying, it stands in as the AI backend while I build apps, and it's where I benchmark new models against real tasks. Nothing leaves the network.</p>
+          <div class="pipe-stack"><span class="chip">Mac mini M6</span><span class="chip">Ollama</span><span class="chip">MLX</span><span class="chip">Benchmarking</span></div>
         </div>
       </li>
     </ul>
@@ -468,11 +675,11 @@
       <h2 class="sec-title">What I bring to a team</h2>
     </div>
     <div class="cap-grid">
-      <div class="cap reveal"><div class="cap-band"></div><h4>Frontend &amp; product engineering</h4><p>Customer-facing features in large React and TypeScript codebases: architecture, state management, testing strategy, and a TDD habit defended in code review.</p></div>
+      <div class="cap reveal"><div class="cap-band"></div><h4>Web &amp; Android product engineering</h4><p>Customer-facing features in large React and TypeScript codebases, and a native Android app (Kotlin, Compose, Room) built from scratch: architecture, state, testing strategy, and a TDD habit defended in code review.</p></div>
       <div class="cap reveal"><div class="cap-band"></div><h4>Backend systems</h4><p>Node.js and TypeScript services, REST APIs, webhook architectures, and PostgreSQL data models designed for correctness first.</p></div>
       <div class="cap reveal"><div class="cap-band"></div><h4>Cloud infrastructure</h4><p>AWS-native architectures: Fargate for burst compute, S3 for durable archives, Lightsail for lean services. Cost-aware by default.</p></div>
       <div class="cap reveal"><div class="cap-band"></div><h4>Embedded &amp; IoT</h4><p>GNSS receivers, cellular modems, and Raspberry Pi fleets. Comfortable where hardware constraints shape software design.</p></div>
-      <div class="cap reveal"><div class="cap-band"></div><h4>Automation &amp; ops</h4><p>Docker, n8n workflows, watchdogs, and alerting. I build the monitoring before the system needs it.</p></div>
+      <div class="cap reveal"><div class="cap-band"></div><h4>Automation, ops &amp; local AI</h4><p>Docker, n8n workflows, watchdogs, and alerting, plus LLM features built around privacy: on-device processing, redaction before anything leaves the phone, and a local Ollama node for experiments. I build the monitoring before the system needs it.</p></div>
       <div class="cap reveal"><div class="cap-band"></div><h4>Product thinking</h4><p>An entrepreneurial streak: scoping MVPs, weighing build-vs-buy, and treating cost control as an architecture concern, not an afterthought.</p></div>
     </div>
   </div>
@@ -491,21 +698,29 @@
         <div class="xp-role">Senior Software Engineer · <span class="xp-org">Cobalt.io</span></div>
         <p class="xp-desc">Building customer-facing product features on a security platform. React, TypeScript, and backend services inside a cross-functional product team.</p>
       </div>
-      <div class="xp-loc">BERLIN</div>
+      <div class="xp-loc">BERLIN,&nbsp;GERMANY</div>
     </div>
     <div class="xp-row reveal">
       <div class="xp-time">CURRENT&nbsp;·&nbsp;CONTRACT</div>
       <div>
         <div class="xp-role">Platform Engineer · <span class="xp-org">Texplor</span></div>
-        <p class="xp-desc">Contract work on GNSS data infrastructure.</p>
+        <p class="xp-desc">Sole engineer on a GNSS data platform: designed, built, and operate the pipeline from remote field receivers to centimeter-level RTK positioning, covering cloud ingestion, containerized serverless processing on AWS, and automated monitoring and alerting. <a href="#projects" style="color:var(--amber)">See the case study</a>.</p>
       </div>
-      <div class="xp-loc">REMOTE</div>
+      <div class="xp-loc">POTSDAM,&nbsp;GERMANY</div>
+    </div>
+    <div class="xp-row reveal">
+      <div class="xp-time">2026</div>
+      <div>
+        <div class="xp-role">Android Engineer · <span class="xp-org">Foldy</span></div>
+        <p class="xp-desc">Sole Android engineer: built the Android app from scratch to match the shipping iOS product. Kotlin, Jetpack Compose, on-device OCR, translation, and privacy-preserving redaction.</p>
+      </div>
+      <div class="xp-loc"></div>
     </div>
     <div class="xp-row reveal">
       <div class="xp-time">ONGOING</div>
       <div>
-        <div class="xp-role">Independent engineering &amp; prototyping</div>
-        <p class="xp-desc">Self-hosted infrastructure, automation workflows, and applied-AI prototypes exploring messaging products and agent architectures.</p>
+        <div class="xp-role">Independent products &amp; engineering</div>
+        <p class="xp-desc">Shipping my own products (Klk IA, D-Schutz) and client sites, and running self-hosted infrastructure with a local-LLM node, automation workflows, and applied-AI prototypes.</p>
       </div>
       <div class="xp-loc">BERLIN</div>
     </div>
