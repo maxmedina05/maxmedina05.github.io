@@ -206,6 +206,8 @@
   .cap h4{font-family:'Unbounded',sans-serif;font-weight:400;font-size:16px;margin-bottom:14px}
   .cap p{color:var(--slate);font-size:14px;line-height:1.7}
   .cap .cap-band{width:34px;height:3px;background:var(--amber);margin-bottom:20px;border-radius:2px}
+  .cap-wide{grid-column:1/-1}
+  .cap-link{margin-top:16px;background:none;border:0;padding:0;cursor:pointer;color:var(--amber);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em}
 
   /* ---------- Experience ---------- */
   .xp-row{display:grid;grid-template-columns:200px 1fr auto;gap:28px;padding:34px 0;border-top:1px solid var(--hairline);align-items:baseline}
@@ -360,6 +362,16 @@
       <span class="proj-open">DETAILS <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></span>
     </button>
 
+    <button class="proj-card reveal" data-modal="modal-papeles" aria-haspopup="dialog">
+      <div>
+        <div class="proj-eyebrow">CLIENT · WEB · IN PROGRESS</div>
+        <div class="proj-name">Papeles Legales</div>
+        <p class="proj-desc">A legal-services platform for the Dominican Republic, being built as sole engineer. Customers pick a contract template, fill a questionnaire, pay by card, and download the PDF with its electronic invoice. Pre-launch: the purchase flow works in test mode; the local card gateway, electronic invoicing, and production are still open.</p>
+        <div class="proj-chips"><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">PostgreSQL</span><span class="chip">Prisma</span><span class="chip">Stripe</span><span class="chip">Terraform</span><span class="chip">Google Cloud</span></div>
+      </div>
+      <span class="proj-open">DETAILS <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+    </button>
+
     <button class="proj-card reveal" data-modal="modal-homelab" aria-haspopup="dialog">
       <div>
         <div class="proj-eyebrow">PERSONAL · SELF-HOSTED INFRASTRUCTURE</div>
@@ -404,6 +416,106 @@
     </a>
   </div>
 </section>
+
+<!-- ============ MODAL: AGENTIC ENGINEERING ============ -->
+<div class="modal" id="modal-agentic" role="dialog" aria-modal="true" aria-labelledby="agentic-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close aria-label="Close details">CLOSE&nbsp;✕</button>
+    <div class="modal-eyebrow">HOW I WORK · AGENTIC ENGINEERING</div>
+    <h3 class="modal-title" id="agentic-title">Executed checks over skimmed diffs.</h3>
+    <p class="modal-intro">I use Claude Code as the main driver and push work to subagents to keep its context clean. I delegate some subtasks to other models (OpenAI models and open-source ones such as Kimi and Qwen) when a second opinion or a cheaper model fits. The agent does most of the typing; I own the decisions and the verification, which is how I ship several PRs a day.</p>
+    <ul class="pipeline">
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;01<br>SCOPE</div>
+        <div>
+          <div class="pipe-name">Usable increments, with a written "not now"</div>
+          <p class="pipe-desc">I split each project into increments, Kniberg's skateboard-to-car. On my current legal-services project, the launch is increment 1: buying a contract, and nothing else. Everything beyond it is a written "not now", so agents don't build toward it.</p>
+          <div class="pipe-stack"><span class="chip">Skateboard to car</span><span class="chip">Explicit non-goals</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;02<br>SPEC</div>
+        <div>
+          <div class="pipe-name">Spec, plan, tasks, then build</div>
+          <p class="pipe-desc">Each slice goes through spec-kit, with slash commands running every step in a subagent that returns a short report. Business, legal, and one-way architecture calls go in a decision log that agents must check before planning. A read-only "drift" agent compares a branch against the client's documents and the log, and a "skeptic" agent argues against building a feature now (build, shrink, defer, or cut). Before any UI exists, I generate HTML canvases and diagrams to see what will be built.</p>
+          <div class="pipe-stack"><span class="chip">spec-kit</span><span class="chip">Decision log</span><span class="chip">Drift agent</span><span class="chip">Skeptic agent</span><span class="chip">HTML canvases</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;03<br>VERIFY</div>
+        <div>
+          <div class="pipe-name">Tests first, and a Definition of Done</div>
+          <p class="pipe-desc">TDD by default: the agent writes a failing test first, usually an integration test, then the smallest change that passes. Bug fixes get a regression test. A written Definition of Done covers tests, typecheck, lint on the touched code, and authorization and failure paths. The completion report separates Verified (checks actually run) from Uncertain, so I know where to look.</p>
+          <div class="pipe-stack"><span class="chip">TDD</span><span class="chip">Integration tests</span><span class="chip">Verified vs Uncertain</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;04<br>SHIP</div>
+        <div>
+          <div class="pipe-name">Small PRs, bounded blast radius</div>
+          <p class="pipe-desc">One Git worktree per PR, so my main checkout is never edited and parallel agents don't collide. One user story per slice keeps each diff reviewable. Subagent code review runs against the task's scope only, with a cap on findings; CI plus three review checks run on every PR and the agent fixes what matters. Before merging I review before/after screenshots with red arrows on what changed, or a narrated video of the end-to-end run, and check it did what I intended.</p>
+          <div class="pipe-stack"><span class="chip">Git worktrees</span><span class="chip">CI</span><span class="chip">Scoped review</span><span class="chip">Visual review</span><span class="chip">Playwright</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;05<br>GUARD</div>
+        <div>
+          <div class="pipe-name">Hard guardrails, and reading where it counts</div>
+          <p class="pipe-desc">Permissions and hooks stop the agent from touching secrets, committing, pushing, installing packages, or making network calls without my approval. A privacy-law review skill runs on anything touching personal data. I read code selectively, on the risky paths: auth, payments, and personal data.</p>
+          <div class="pipe-stack"><span class="chip">Permissions &amp; hooks</span><span class="chip">Privacy review skill</span><span class="chip">Selective code review</span></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ MODAL: PAPELES LEGALES ============ -->
+<div class="modal" id="modal-papeles" role="dialog" aria-modal="true" aria-labelledby="papeles-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close aria-label="Close details">CLOSE&nbsp;✕</button>
+    <div class="modal-eyebrow">CLIENT · WEB · IN PROGRESS · PRE-LAUNCH</div>
+    <h3 class="modal-title" id="papeles-title">Legal contracts you can buy online, built for the Dominican Republic.</h3>
+    <p class="modal-intro">Papeles Legales is a legal-services startup. Today, getting a contract (a rental, a loan, a vehicle sale) in the Dominican Republic means finding a lawyer. The first release lets a stranger pick a template, answer a questionnaire without an account, pay by card, and download the finished PDF with its invoice.</p>
+    <p class="modal-intro">It is not live yet: the purchase flow works end to end in test mode, and the local card gateway (Azul), electronic invoicing, and the production environment are still being finished. I'm building it as the sole engineer, scoped as a deliberately small first increment and built with an agent-driven workflow of specs, tests, and a decision log (see "How I work" under Capabilities).</p>
+    <ul class="pipeline">
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;01<br>BUY</div>
+        <div>
+          <div class="pipe-name">Questionnaire to PDF, no account</div>
+          <p class="pipe-desc">Five contract templates, each party a person or a company. Customers edit only their answers, never the contract text. The document is generated from a Word template with fixed pagination, unsplit signature blocks, and a watermarked preview on demand before paying. Registration happens at the review step.</p>
+          <div class="pipe-stack"><span class="chip">React</span><span class="chip">Clerk</span><span class="chip">docxtemplater</span><span class="chip">Template engine</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;02<br>PAY</div>
+        <div>
+          <div class="pipe-name">Payments and electronic invoicing</div>
+          <p class="pipe-desc">One payment per order, checkout expiry, and webhook-confirmed fulfillment, running on Stripe in test mode behind a payment-provider interface so the Dominican bank gateway (Azul) can replace it. Every paid order also gets an electronic invoice (e-CF) for the DGII, built against a fake provider until the real one is chosen. Background jobs expire unfinished checkouts and issue the invoices.</p>
+          <div class="pipe-stack"><span class="chip">Stripe (test mode)</span><span class="chip">Azul</span><span class="chip">e-CF / DGII</span><span class="chip">pg-boss jobs</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;03<br>OPERATE</div>
+        <div>
+          <div class="pipe-name">Staff workspace and audit trail</div>
+          <p class="pipe-desc">The team loads and edits contract templates through a questionnaire builder, with a second person's approval required before a version is published. Role-based access separates operations, support, and content staff, and an audit log records who did what, from which IP and browser.</p>
+          <div class="pipe-stack"><span class="chip">Role-based access</span><span class="chip">Versioned templates</span><span class="chip">Audit log</span></div>
+        </div>
+      </li>
+      <li class="pipe-stage">
+        <div class="pipe-label">STAGE&nbsp;04<br>SHIP</div>
+        <div>
+          <div class="pipe-name">Google Cloud, proof of concept first</div>
+          <p class="pipe-desc">The infrastructure is defined in Terraform: a VM running Docker Compose, Cloud SQL for PostgreSQL, private storage buckets with a 10-year retention policy, and secrets in Secret Manager. A database restore has been drilled on the proof-of-concept deploy; production, daily backups, and the final end-to-end run are still open. A Playwright golden-path test covers the purchase flow end to end.</p>
+          <div class="pipe-stack"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">PostgreSQL</span><span class="chip">Prisma</span><span class="chip">Terraform</span><span class="chip">Google Cloud</span><span class="chip">Playwright</span></div>
+        </div>
+      </li>
+    </ul>
+    <div class="modal-cta"><a class="btn btn-amber" href="https://35-237-154-180.sslip.io/" target="_blank" rel="noopener">VIEW&nbsp;PROTOTYPE&nbsp;↗</a></div>
+  </div>
+</div>
 
 <!-- ============ MODAL: GNSS ============ -->
 <div class="modal" id="modal-gnss" role="dialog" aria-modal="true" aria-labelledby="gnss-title">
@@ -681,6 +793,7 @@
       <div class="cap reveal"><div class="cap-band"></div><h4>Embedded &amp; IoT</h4><p>GNSS receivers, cellular modems, and Raspberry Pi fleets. Comfortable where hardware constraints shape software design.</p></div>
       <div class="cap reveal"><div class="cap-band"></div><h4>Automation, ops &amp; local AI</h4><p>Docker, n8n workflows, watchdogs, and alerting, plus LLM features built around privacy: on-device processing, redaction before anything leaves the phone, and a local Ollama node for experiments. I build the monitoring before the system needs it.</p></div>
       <div class="cap reveal"><div class="cap-band"></div><h4>Product thinking</h4><p>An entrepreneurial streak: scoping MVPs, weighing build-vs-buy, and treating cost control as an architecture concern, not an afterthought.</p></div>
+      <div class="cap cap-wide reveal"><div class="cap-band"></div><h4>Agentic engineering</h4><p>Claude Code is my main driver, with subagents keeping its context clean and other models (OpenAI's and open-source ones such as Kimi and Qwen) brought in for a second opinion. I scope in small increments, spec each slice before building it, and trust executed checks and a bounded blast radius rather than skimming diffs. I read code selectively, on the risky paths: auth, payments, personal data.</p><button class="cap-link" data-modal="modal-agentic" aria-haspopup="dialog">HOW&nbsp;I&nbsp;WORK&nbsp;↗</button></div>
     </div>
   </div>
 </section>
